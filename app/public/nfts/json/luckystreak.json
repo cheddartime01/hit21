@@ -1,0 +1,14 @@
+{
+  "name": "Hit 21 Lucky Streak",
+  "symbol": "H21",
+  "description": "Earned for winning 10 games in a row at Hit 21 Casino!",
+  "image": "https://hit21.game/nfts/images/luckystreak.svg",
+  "attributes": [
+    { "trait_type": "Tier", "value": "Lucky Streak" },
+    { "trait_type": "Streak Required", "value": "10" }
+  ],
+  "properties": {
+    "files": [{ "uri": "https://hit21.game/nfts/images/luckystreak.svg", "type": "image/png" }],
+    "category": "image"
+  }
+}

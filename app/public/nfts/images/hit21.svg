@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#1a1a2e"/>
+  <rect x="20" y="20" width="360" height="460" rx="20" fill="#2c3e50" stroke="#f39c12" stroke-width="4"/>
+  <text x="200" y="220" font-family="Arial" font-size="60" fill="#f39c12" text-anchor="middle">🎰</text>
+  <text x="200" y="300" font-family="Arial" font-size="36" fill="#fff" text-anchor="middle" font-weight="bold">HIT 21</text>
+  <text x="200" y="420" font-family="Arial" font-size="18" fill="#bdc3c7" text-anchor="middle">NFT Collection</text>
+</svg>

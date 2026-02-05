@@ -1,0 +1,25 @@
+{
+  "name": "Hit 21 Bronze Card",
+  "symbol": "H21",
+  "description": "Earned for winning 10 games at Hit 21 Casino!",
+  "image": "https://hit21.game/nfts/images/bronze.svg",
+  "attributes": [
+    {
+      "trait_type": "Tier",
+      "value": "Bronze"
+    },
+    {
+      "trait_type": "Wins Required",
+      "value": "10"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://hit21.game/nfts/images/bronze.svg",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}

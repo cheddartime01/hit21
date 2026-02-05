@@ -1,0 +1,14 @@
+{
+  "name": "Hit 21 High Roller",
+  "symbol": "H21",
+  "description": "Earned for betting 100,000 total chips at Hit 21 Casino!",
+  "image": "https://hit21.game/nfts/images/highroller.svg",
+  "attributes": [
+    { "trait_type": "Tier", "value": "High Roller" },
+    { "trait_type": "Total Bet Required", "value": "100000" }
+  ],
+  "properties": {
+    "files": [{ "uri": "https://hit21.game/nfts/images/highroller.svg", "type": "image/png" }],
+    "category": "image"
+  }
+}

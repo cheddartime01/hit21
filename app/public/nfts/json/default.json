@@ -1,0 +1,11 @@
+{
+  "name": "Hit 21 NFT",
+  "symbol": "H21",
+  "description": "An NFT from Hit 21 Casino!",
+  "image": "https://hit21.game/nfts/images/default.svg",
+  "attributes": [],
+  "properties": {
+    "files": [{ "uri": "https://hit21.game/nfts/images/default.svg", "type": "image/png" }],
+    "category": "image"
+  }
+}

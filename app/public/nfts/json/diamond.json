@@ -1,0 +1,14 @@
+{
+  "name": "Hit 21 Diamond Card",
+  "symbol": "H21",
+  "description": "Earned for winning 1,000 games at Hit 21 Casino!",
+  "image": "https://hit21.game/nfts/images/diamond.svg",
+  "attributes": [
+    { "trait_type": "Tier", "value": "Diamond" },
+    { "trait_type": "Wins Required", "value": "1000" }
+  ],
+  "properties": {
+    "files": [{ "uri": "https://hit21.game/nfts/images/diamond.svg", "type": "image/png" }],
+    "category": "image"
+  }
+}

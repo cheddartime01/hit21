@@ -1,0 +1,148 @@
+{
+  "version": "0.1.0",
+  "name": "blackjack",
+  "instructions": [
+    {
+      "name": "claimWelcomeBonus",
+      "accounts": [
+        {"name": "admin", "isMut": true, "isSigner": true},
+        {"name": "playerTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "playerState", "isMut": true, "isSigner": false},
+        {"name": "player", "isMut": true, "isSigner": true},
+        {"name": "mint", "isMut": false, "isSigner": false},
+        {"name": "tokenProgram", "isMut": false, "isSigner": false},
+        {"name": "associatedTokenProgram", "isMut": false, "isSigner": false},
+        {"name": "systemProgram", "isMut": false, "isSigner": false}
+      ],
+      "args": []
+    },
+    {
+      "name": "createToken",
+      "accounts": [
+        {"name": "admin", "isMut": true, "isSigner": true},
+        {"name": "mint", "isMut": true, "isSigner": false},
+        {"name": "adminTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "tokenProgram", "isMut": false, "isSigner": false},
+        {"name": "systemProgram", "isMut": false, "isSigner": false},
+        {"name": "rent", "isMut": false, "isSigner": false},
+        {"name": "associatedTokenProgram", "isMut": false, "isSigner": false}
+      ],
+      "args": [{"name": "decimals", "type": "u8"}]
+    },
+    {
+      "name": "initializePlayer",
+      "accounts": [
+        {"name": "playerState", "isMut": true, "isSigner": false},
+        {"name": "player", "isMut": true, "isSigner": true},
+        {"name": "systemProgram", "isMut": false, "isSigner": false}
+      ],
+      "args": []
+    },
+    {
+      "name": "buyChips",
+      "accounts": [
+        {"name": "player", "isMut": true, "isSigner": true},
+        {"name": "admin", "isMut": true, "isSigner": false},
+        {"name": "adminTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "playerTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "playerState", "isMut": true, "isSigner": false},
+        {"name": "tokenProgram", "isMut": false, "isSigner": false},
+        {"name": "systemProgram", "isMut": false, "isSigner": false}
+      ],
+      "args": [
+        {"name": "solAmount", "type": "u64"},
+        {"name": "chipAmount", "type": "u64"}
+      ]
+    },
+    {
+      "name": "initializeGame",
+      "accounts": [
+        {"name": "game", "isMut": true, "isSigner": false},
+        {"name": "player", "isMut": true, "isSigner": true},
+        {"name": "playerTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "gameTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "playerState", "isMut": true, "isSigner": false},
+        {"name": "systemProgram", "isMut": false, "isSigner": false},
+        {"name": "tokenProgram", "isMut": false, "isSigner": false}
+      ],
+      "args": [{"name": "betAmount", "type": "u64"}]
+    },
+    {
+      "name": "hit",
+      "accounts": [
+        {"name": "game", "isMut": true, "isSigner": false},
+        {"name": "player", "isMut": false, "isSigner": true},
+        {"name": "playerTokenAccount", "isMut": false, "isSigner": false},
+        {"name": "gameTokenAccount", "isMut": false, "isSigner": false},
+        {"name": "playerState", "isMut": false, "isSigner": false},
+        {"name": "tokenProgram", "isMut": false, "isSigner": false}
+      ],
+      "args": []
+    },
+    {
+      "name": "stand",
+      "accounts": [
+        {"name": "game", "isMut": true, "isSigner": false},
+        {"name": "player", "isMut": false, "isSigner": true},
+        {"name": "playerTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "gameTokenAccount", "isMut": true, "isSigner": false},
+        {"name": "playerState", "isMut": true, "isSigner": false},
+        {"name": "tokenProgram", "isMut": false, "isSigner": false}
+      ],
+      "args": []
+    },
+    {
+      "name": "claimNft",
+      "accounts": [
+        {"name": "admin", "isMut": true, "isSigner": true},
+        {"name": "playerState", "isMut": true, "isSigner": false},
+        {"name": "nftMint", "isMut": true, "isSigner": false},
+        {"name": "playerNftAccount", "isMut": true, "isSigner": false},
+        {"name": "nftMetadata", "isMut": true, "isSigner": false},
+        {"name": "player", "isMut": false, "isSigner": true},
+        {"name": "tokenProgram", "isMut": false, "isSigner": false},
+        {"name": "tokenMetadataProgram", "isMut": false, "isSigner": false},
+        {"name": "associatedTokenProgram", "isMut": false, "isSigner": false},
+        {"name": "systemProgram", "isMut": false, "isSigner": false},
+        {"name": "rent", "isMut": false, "isSigner": false}
+      ],
+      "args": [{"name": "nftType", "type": "u8"}]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "PlayerState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {"name": "player", "type": "pubkey"},
+          {"name": "totalWins", "type": "u64"},
+          {"name": "totalChips", "type": "u64"},
+          {"name": "totalBet", "type": "u64"},
+          {"name": "currentStreak", "type": "u8"},
+          {"name": "nftsMinted", "type": {"vec": "u8"}},
+          {"name": "welcomeBonusClaimed", "type": "bool"},
+          {"name": "bump", "type": "u8"}
+        ]
+      }
+    },
+    {
+      "name": "GameState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {"name": "player", "type": "pubkey"},
+          {"name": "dealerHand", "type": {"array": ["u8", 10]}},
+          {"name": "playerHand", "type": {"array": ["u8", 10]}},
+          {"name": "dealerCount", "type": "u8"},
+          {"name": "playerCount", "type": "u8"},
+          {"name": "dealerCards", "type": "u8"},
+          {"name": "playerCards", "type": "u8"},
+          {"name": "gameState", "type": "u8"},
+          {"name": "betAmount", "type": "u64"},
+          {"name": "bump", "type": "u8"}
+        ]
+      }
+    }
+  ]
+}

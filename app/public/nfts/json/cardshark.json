@@ -1,0 +1,14 @@
+{
+  "name": "Hit 21 Card Shark",
+  "symbol": "H21",
+  "description": "Earned for winning 2,500 games at Hit 21 Casino!",
+  "image": "https://hit21.game/nfts/images/cardshark.svg",
+  "attributes": [
+    { "trait_type": "Tier", "value": "Card Shark" },
+    { "trait_type": "Wins Required", "value": "2500" }
+  ],
+  "properties": {
+    "files": [{ "uri": "https://hit21.game/nfts/images/cardshark.svg", "type": "image/png" }],
+    "category": "image"
+  }
+}

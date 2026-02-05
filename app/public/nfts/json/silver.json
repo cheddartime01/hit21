@@ -1,0 +1,25 @@
+{
+  "name": "Hit 21 Silver Card",
+  "symbol": "H21",
+  "description": "Earned for winning 100 games at Hit 21 Casino!",
+  "image": "https://hit21.game/nfts/images/silver.svg",
+  "attributes": [
+    {
+      "trait_type": "Tier",
+      "value": "Silver"
+    },
+    {
+      "trait_type": "Wins Required",
+      "value": "100"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://hit21.game/nfts/images/silver.svg",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}
