@@ -1,4 +1,4 @@
-# 🎰 Hit 21 - Fully Web3 Blackjack Casino
+# 🎰 Hit 21 - Fully Web3 Blackjack
 
 **Login with wallet → Play Blackjack → Win REAL NFTs that go to your wallet!**
 
